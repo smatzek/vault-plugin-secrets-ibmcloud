@@ -11,7 +11,7 @@ func pathConfig(b *ibmCloudSecretBackend) *framework.Path {
 		Pattern: "config",
 		Fields: map[string]*framework.FieldSchema{
 			apiKeyField: {
-           				Type:        framework.TypeString,
+				Type:        framework.TypeString,
 				Description: "The administrator API key.",
 			},
 			accountIDField: {
@@ -57,7 +57,7 @@ func (b *ibmCloudSecretBackend) config(ctx context.Context, s logical.Storage) (
 	if err := entry.DecodeJSON(config); err != nil {
 		return nil, err
 	}
-	return config, nil
+	return config, nil, somethingelse
 }
 
 func (b *ibmCloudSecretBackend) pathConfigExistenceCheck(ctx context.Context, req *logical.Request, data *framework.FieldData) (bool, error) {
