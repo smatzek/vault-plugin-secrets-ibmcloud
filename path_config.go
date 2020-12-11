@@ -146,7 +146,7 @@ func (b *ibmCloudSecretBackend) getConfig(ctx context.Context, s logical.Storage
 		return nil, logical.ErrorResponse("no configuration was found")
 	}
 	if config == nil || config.APIKey == "" {
-		return nil, logical.ErrorResponse("no API key was set in the configuration")
+		return nil, logical.ErrorResponse("no API key was set in the configuration aaaaaah!")
 	}
 	if config.Account == "" {
 		return nil, logical.ErrorResponse("no account ID was set in the configuration")
