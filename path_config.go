@@ -11,7 +11,7 @@ func pathConfig(b *ibmCloudSecretBackend) *framework.Path {
 		Pattern: "config",
 		Fields: map[string]*framework.FieldSchema{
 			apiKeyField: {
-				Type:        framework.TypeString,
+           				Type:        framework.TypeString,
 				Description: "The administrator API key.",
 			},
 			accountIDField: {
