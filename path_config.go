@@ -57,7 +57,7 @@ func (b *ibmCloudSecretBackend) config(ctx context.Context, s logical.Storage) (
 	if err := entry.DecodeJSON(config); err != nil {
 		return nil, err
 	}
-	return config, nil, somethingelse
+	return config, nil
 }
 
 func (b *ibmCloudSecretBackend) pathConfigExistenceCheck(ctx context.Context, req *logical.Request, data *framework.FieldData) (bool, error) {
