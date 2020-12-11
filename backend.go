@@ -103,7 +103,7 @@ func (b *ibmCloudSecretBackend) getAdminToken(ctx context.Context, s logical.Sto
 	}
 
 	if config == nil || config.APIKey == "" {
-		return "", errors.New("no API key was set in the configuration")
+		return "", errors.New("no API key was set in the configuration aaaah!")
 	}
 
 	token, err := b.iamHelper.ObtainToken(config.APIKey)
